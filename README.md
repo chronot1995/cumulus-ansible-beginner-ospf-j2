@@ -1,2 +1,2 @@
-# ansible-training-ospf-j2
-Two Cumulus switches running OSPF and configured with Jinja / J2 templates
+# ansible-training-ospf-nclu
+Two switches configured with OSPF using Cumulus' NCLU Ansible module
