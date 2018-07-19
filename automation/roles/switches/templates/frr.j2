@@ -1,0 +1,28 @@
+frr version 3.2+cl3u4
+frr defaults datacenter
+!
+username cumulus nopassword
+!
+service integrated-vtysh-config
+!
+log syslog informational
+!
+{% for interface in node[inventory_hostname]["routing"]["ospf"]["neighbors"] -%}
+interface {{interface}}
+ ip ospf network point-to-point
+!
+{% endfor %}
+{% if node[inventory_hostname]["routing"] is defined %}
+router ospf
+ ospf router-id {{ node[inventory_hostname]["routing"]["lo"]|replace("/32", "")}}
+ network {{ node[inventory_hostname]["routing"]["lo"] }}
+{% endif %}
+ !
+ address-family ipv4 unicast
+  redistribute connected
+ exit-address-family
+ !
+!
+{% endif -%}
+line vty
+!
