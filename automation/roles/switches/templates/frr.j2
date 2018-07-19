@@ -17,11 +17,6 @@ router ospf
  ospf router-id {{ node[inventory_hostname]["routing"]["lo"]|replace("/32", "")}}
  network {{ node[inventory_hostname]["routing"]["lo"] }} area 0
 {% endif %}
- !
- address-family ipv4 unicast
-  redistribute connected
- exit-address-family
- !
 !
 line vty
 !
