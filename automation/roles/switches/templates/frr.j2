@@ -16,6 +16,7 @@ interface {{interface}}
 router ospf
  ospf router-id {{ node[inventory_hostname]["routing"]["lo"]|replace("/32", "")}}
  network {{ node[inventory_hostname]["routing"]["lo"] }} area 0
+ redistribute connected
 {% endif %}
 !
 line vty
