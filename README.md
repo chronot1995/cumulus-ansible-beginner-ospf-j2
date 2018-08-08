@@ -1,12 +1,12 @@
-## begin-ansible-training-ospf-nclu
+## begin-ansible-training-ospf-j2
 
 ### Summary:
 
-This is an Ansible demo which configures two Cumulus VX switches with OSPF using Ansible's NCLU module
+This is an Ansible demo which configures two Cumulus VX switches with OSPF Unnumbered using Jinja2 / J2 templates
 
 ### Network Diagram:
 
-![Network Diagram](https://github.com/chronot1995/begin-ansible-training-ospf-nclu/blob/master/documentation/begin-ansible-training-ospf-nclu.png)
+![Network Diagram](https://github.com/chronot1995/begin-ansible-training-ospf-j2/blob/master/documentation/begin-ansible-training-ospf-j2.png)
 
 ### Initializing the demo environment:
 
@@ -22,11 +22,11 @@ First, make sure that the following is currently running on your machine:
 
 3. Copy the Git repo to your local machine:
 
-    ```git clone https://github.com/chronot1995/begin-ansible-training-ospf-nclu```
+    ```git clone https://github.com/chronot1995/begin-ansible-training-ospf-j2```
 
 4. Change directories to the following
 
-    ```begin-ansible-training-ospf-nclu```
+    ```begin-ansible-training-ospf-j2```
 
 6. Run the following:
 
@@ -40,11 +40,11 @@ First, make sure that the following is currently running on your machine:
 
 2. Copy the Git repo unto the oob-mgmt-server:
 
-    ```git clone https://github.com/chronot1995/begin-ansible-training-ospf-nclu```
+    ```git clone https://github.com/chronot1995/begin-ansible-training-ospf-j2```
 
 3. Change directories to the following
 
-    ```begin-ansible-training-ospf-nclu/automation```
+    ```begin-ansible-training-ospf-j2/automation```
 
 4. Run the following:
 
@@ -115,7 +115,7 @@ O>* 10.2.2.2/32 [110/100] via 10.2.2.2, swp1 onlink, 00:00:04
 
 3. The following command was used to run the Topology Converter within the vx-simulation directory:
 
-    ```python2 topology_converter.py begin-ansible-training-ospf-nclu.dot -c```
+    ```python2 topology_converter.py begin-ansible-training-ospf-j2.dot -c```
 
     After the above command is executed, the following configuration changes are necessary:
 
