@@ -21,7 +21,7 @@ REPONAME="begin-ansible-training-ospf-j2"
 #Install Automation Tools
 puppet=0
 ansible=1
-ansible_version=2.6.1
+ansible_version=2.6.2
 
 #######################
 
@@ -210,7 +210,7 @@ cat <<EOT >> /home/cumulus/.gitconfig
     editor = vim
 EOT
 
-echo " ### Adding .bash_profile to auto login as cumulus user"
+echo "### Adding .bash_profile to auto login as cumulus user"
 echo "sudo su - cumulus" >> /home/vagrant/.bash_profile
 echo "exit" >> /home/vagrant/.bash_profile
 
