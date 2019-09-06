@@ -1,0 +1,8 @@
+#####
+# Host config for cumulus-ansible-beginner-ospf-j2
+#####
+
+- hosts: switches
+  become: true
+  roles:
+  - switches

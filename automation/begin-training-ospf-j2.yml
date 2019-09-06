@@ -1,8 +1,0 @@
-#####
-# Host config for begin-training-ospf-j2
-#####
-
-- hosts: switches
-  become: true
-  roles:
-  - switches

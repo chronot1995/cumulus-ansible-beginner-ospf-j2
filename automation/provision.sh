@@ -1,2 +1,2 @@
 #!/bin/bash
-ansible-playbook begin-training-ospf-j2.yml
+ansible-playbook cumulus-ansible-beginner-ospf-j2.yml
