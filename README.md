@@ -2,7 +2,7 @@
 
 ### Summary:
 
-  - Cumulus Linux 3.7.8
+  - Cumulus Linux 3.7.9
   - Underlying Topology Converter to 4.7.0
   - Tested against Vagrant 2.1.5 on Mac and Linux. Windows is not supported.
   - Tested against Virtualbox 5.2.32 on Mac 10.14
@@ -52,43 +52,60 @@ First, make sure that the following is currently running on your machine:
 
 1. Copy the Git repo to your local machine:
 
-    ```git clone https://github.com/chronot1995/cumulus-ansible-beginner-ospf-j2```
+    ```
+    git clone https://github.com/chronot1995/cumulus-ansible-beginner-ospf-j2/
+    ```
 
 2. Change directories to the following
 
-    ```cumulus-ansible-beginner-ospf-j2```
+    ```
+    cumulus-ansible-beginner-ospf-j2
+    ```
 
 3a. Run the following for Virtualbox:
 
-    ```./start-vagrant-vbox-poc.sh```
+    ```
+    ./start-vagrant-vbox-poc.sh
+    ```
 
 3b. Run the following for Libvirt:
-
-    ```./start-vagrant-libvirt-poc.sh```
+    ```
+    ./start-vagrant-libvirt-poc.sh
+    ```
 
 ### Running the Ansible Playbook
 
 1a. SSH into the Virtualbox oob-mgmt-server:
 
-    ```cd vx-vbox-simulation```   
-    ```vagrant ssh oob-mgmt-server```
+    ```
+    cd vx-vbox-simulation
+    vagrant ssh oob-mgmt-server
+    ```
 
 1a. SSH into the Libvirt oob-mgmt-server:
 
-    ```cd vx-libvirt-simulation```   
-    ```vagrant ssh oob-mgmt-server```
+    ```
+    cd vx-libvirt-simulation  
+    vagrant ssh oob-mgmt-server
+    ```
 
 2. Copy the Git repo unto the oob-mgmt-server:
 
-    ```git clone https://github.com/chronot1995/cumulus-ansible-beginner-ospf-j2```
+    ```
+    git clone https://github.com/chronot1995/cumulus-segment-routing
+    ```
 
 3. Change directories to the following
 
-    ```cumulus-ansible-beginner-ospf-j2/automation```
+    ```
+    cumulus-segment-routing/automation
+    ```
 
 4. Run the following:
 
-    ```./provision.sh```
+    ```
+    ./provision.sh
+    ```
 
 This will bring run the automation script and configure the two switches with OSPF.
 
@@ -152,14 +169,16 @@ O>* 10.2.2.2/32 [110/100] via 10.2.2.2, swp1 onlink, 00:00:04
 
     https://github.com/CumulusNetworks/topology_converter
 
-3. The following command was used to run the Topology Converter within the vx-simulation directory:
+3. The following command was used to run the Topology Converter within the appropriate vx-sim directory:
 
-    ```./topology_converter.py cumulus-segment-routing.dot -c --provider=virtualbox```
-    ```./topology_converter.py cumulus-segment-routing.dot -c --provider=libvirt```
+```
+     ./topology_converter.py cumulus-segment-routing.dot -c --provider=virtualbox
+     ./topology_converter.py cumulus-segment-routing.dot -c --provider=libvirt
+```
 
 After the above command is executed, the following configuration changes are necessary:
 
-4. Within ```vx-simulation/helper_scripts/auto_mgmt_network/OOB_Server_Config_auto_mgmt.sh```
+4. Within "<vx-sim>/helper_scripts/auto_mgmt_network/OOB_Server_Config_auto_mgmt.sh"
 
 The following stanza:
 
