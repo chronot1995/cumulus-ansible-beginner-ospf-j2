@@ -109,7 +109,6 @@ First, make sure that the following is currently running on your machine:
 
 This will bring run the automation script and configure the two switches with OSPF.
 
-
 ### Troubleshooting
 
 Helpful j2 troubleshooting commands:
