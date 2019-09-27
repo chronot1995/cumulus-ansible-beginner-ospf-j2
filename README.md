@@ -92,13 +92,13 @@ First, make sure that the following is currently running on your machine:
 2. Copy the Git repo unto the oob-mgmt-server:
 
     ```
-    git clone https://github.com/chronot1995/cumulus-segment-routing
+    git clone https://github.com/chronot1995/cumulus-ansible-beginner-ospf-j2
     ```
 
 3. Change directories to the following
 
     ```
-    cumulus-segment-routing/automation
+    cumulus-ansible-beginner-ospf-j2/automation
     ```
 
 4. Run the following:
@@ -171,8 +171,8 @@ O>* 10.2.2.2/32 [110/100] via 10.2.2.2, swp1 onlink, 00:00:04
 3. The following command was used to run the Topology Converter within the appropriate vx-sim directory:
 
 ```
-     ./topology_converter.py cumulus-segment-routing.dot -c --provider=virtualbox
-     ./topology_converter.py cumulus-segment-routing.dot -c --provider=libvirt
+     ./topology_converter.py cumulus-ansible-beginner-ospf-j2.dot -c --provider=virtualbox
+     ./topology_converter.py cumulus-ansible-beginner-ospf-j2.dot -c --provider=libvirt
 ```
 
 After the above command is executed, the following configuration changes are necessary:
